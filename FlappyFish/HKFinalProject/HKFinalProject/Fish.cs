@@ -13,64 +13,84 @@ namespace HKFinalProject
     class Fish: DrawableGameComponent
     {
         private SpriteBatch spriteBatch;
-     //   private Texture2D tex;
-        private Vector2 position;
-        private Vector2 speed;
         ContentManager content;
-        public Rectangle fishRec;
-        Texture2D fishTex;
-        string imageSources;
-        //   public Fish(Game game, SpriteBatch spriteBatch,Texture2D tex) : base(game)
-        //   fish = new Fish(game, spriteBatch, Content, fishRec, "Images/fish");
-        public Fish(Game game, SpriteBatch spriteBatch, ContentManager content, Rectangle fishRec, string imageSources) : base(game)
+        public List<Rectangle> fishRec;
+        Rectangle fish;
+        List<Texture2D> fishTex;
+        int currentFrame = 0;
+        bool isJumping = false;
+        int jumpPower=-20;
+        readonly int fishkHeight = 90;
+        readonly int fishWidth = 85;
+        public Fish(Game game, SpriteBatch spriteBatch, ContentManager content) : base(game)
         {
             this.spriteBatch = spriteBatch;
             this.content = content;
-            this.fishRec = fishRec;
-            this.imageSources = imageSources;
+            fishRec = new List<Rectangle>();
+            fishTex = new List<Texture2D>();
+            fish = new Rectangle(50, 50, fishWidth, fishkHeight);
+            Rectangle fish1 = new Rectangle(50, 50, fishWidth, fishkHeight);
+            Rectangle fish2 = new Rectangle(50, 50, fishWidth, fishkHeight);
+            fishRec.Add(fish1);
+            fishRec.Add(fish2);
             LoadContent();
-
-            /*   this.spriteBatch = spriteBatch;
-               this.tex = tex;
-               position = new Vector2((Shared.stage.X - tex.Width) / 2,
-                   Shared.stage.Y - tex.Height);
-               speed = new Vector2(4, 0);
-               */
-        }
-        protected override void LoadContent()
-        {
-            fishTex = content.Load<Texture2D>(imageSources);
-            base.LoadContent();
         }
         public override void Update(GameTime gameTime)
         {
-          /*  KeyboardState ks = Keyboard.GetState();
-            if (ks.IsKeyDown(Keys.Right))
+         
+            if (Keyboard.GetState().IsKeyDown(Keys.Space))
             {
-                position += speed;
-                if (position.X > Shared.stage.X - tex.Width)
+                currentFrame = 1;
+                isJumping = true;
+            }
+            if (isJumping)      // compute a nice arc so that up-movement is gradual
+            {
+                if (jumpPower < 0)
                 {
-                    position.X = Shared.stage.X - tex.Width;
+                    if (fish.Y <= 0)
+                    {
+                        fish.Y = 0;
+                        jumpPower = 0;
+                    }
+                    else
+                    {
+                        fish.Y += jumpPower;
+                        jumpPower++;
+                    }
+                }
+                else
+                { 
+                    isJumping = false;
+                    jumpPower = -20;
                 }
             }
-            else if (ks.IsKeyDown(Keys.Left))
+            else
             {
-                position -= speed;
-                if (position.X < 0)
-                {
-                    position.X = 0;
-                }
+                fish.Y += 4;
+                currentFrame = 0;
             }
-            */
+
             base.Update(gameTime);
         }
 
         public override void Draw(GameTime gameTime)
         {
             spriteBatch.Begin();
-            spriteBatch.Draw(fishTex, position, Color.White);
+            spriteBatch.Draw(fishTex.ElementAt<Texture2D>(currentFrame),
+               fish,
+                Color.White
+                );
             spriteBatch.End();
             base.Draw(gameTime);
+        }
+        protected override void LoadContent()
+        {
+            Texture2D fishText1 = content.Load<Texture2D>("Images/fish2");
+            Texture2D fishText2 = content.Load<Texture2D>("Images/fish1");
+            fishTex.Add(fishText1);
+            fishTex.Add(fishText2);
+
+            base.LoadContent();
         }
     }
 }

@@ -14,28 +14,32 @@ namespace HKFinalProject
     {
         private SpriteBatch spriteBatch;
         private Fish fish;
-        private Rectangle fishRec;
+        private Shark shark;
+        private Background background;
         public ActionScene(Game game) : base(game)
         {
             Game1 g = (Game1)game;
             this.spriteBatch = g.spriteBatch;
             ContentManager Content = game.Content;
-
-            //  Texture2D fishTex = g.Content.Load<Texture2D>("Images/fish");
-            //   batLeft = new Bat(this, spriteBatch, Content, batLeftRec, "images/BatLeft", 1, graphics.PreferredBackBufferHeight, graphics.PreferredBackBufferWidth);
-            fishRec = new Rectangle(0, 0, 2, 2);
-            fish = new Fish(game, spriteBatch, Content, fishRec, "Images/fish");
+            fish = new Fish(game, spriteBatch, Content);
+            shark = new Shark(game, spriteBatch, Content);
+            background = new Background(game, spriteBatch, Content);
             this.Components.Add(fish);
-
+            this.Components.Add(shark);
         }
 
         public override void Update(GameTime gameTime)
         {
+           background.Update(gameTime);
+            shark.Update(gameTime);
             base.Update(gameTime);
         }
 
         public override void Draw(GameTime gameTime)
         {
+           background.Draw(gameTime);
+            fish.Draw(gameTime);
+            shark.Draw(gameTime);
             base.Draw(gameTime);
         }
     }
