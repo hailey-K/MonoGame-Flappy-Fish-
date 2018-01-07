@@ -41,12 +41,16 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="AboutScene.cs" />
     <Compile Include="ActionScene.cs" />
     <Compile Include="Background.cs" />
+    <Compile Include="File.cs" />
     <Compile Include="Fish.cs" />
     <Compile Include="Game1.cs" />
     <Compile Include="GameScene.cs" />
     <Compile Include="HelpScene.cs" />
+    <Compile Include="HighScoreScene.cs" />
+    <Compile Include="MenuBackground.cs" />
     <Compile Include="MenuComponent.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

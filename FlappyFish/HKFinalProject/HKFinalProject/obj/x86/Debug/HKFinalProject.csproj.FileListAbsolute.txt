@@ -91,3 +91,126 @@ C:\Users\RIM\Documents\MonoGame-Flappy-Fish-\FlappyFish\HKFinalProject\HKFinalPr
 C:\Users\RIM\Documents\MonoGame-Flappy-Fish-\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\Content\Images\backgroundTest.xnb
 C:\Users\RIM\Documents\MonoGame-Flappy-Fish-\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\Content\Images\shark1.xnb
 C:\Users\RIM\Documents\MonoGame-Flappy-Fish-\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\Content\Images\shark2.xnb
+C:\Users\Kkim8301\Desktop\MonoGame-Flappy-Fish--master\MonoGame-Flappy-Fish--master\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\Content\Fonts\hilightFont.xnb
+C:\Users\Kkim8301\Desktop\MonoGame-Flappy-Fish--master\MonoGame-Flappy-Fish--master\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\Content\Fonts\regularFont.xnb
+C:\Users\Kkim8301\Desktop\MonoGame-Flappy-Fish--master\MonoGame-Flappy-Fish--master\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\Content\Images\background.xnb
+C:\Users\Kkim8301\Desktop\MonoGame-Flappy-Fish--master\MonoGame-Flappy-Fish--master\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\Content\Images\backgroundTest.xnb
+C:\Users\Kkim8301\Desktop\MonoGame-Flappy-Fish--master\MonoGame-Flappy-Fish--master\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\Content\Images\Bat.xnb
+C:\Users\Kkim8301\Desktop\MonoGame-Flappy-Fish--master\MonoGame-Flappy-Fish--master\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\Content\Images\Fish.xnb
+C:\Users\Kkim8301\Desktop\MonoGame-Flappy-Fish--master\MonoGame-Flappy-Fish--master\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\Content\Images\fish1.xnb
+C:\Users\Kkim8301\Desktop\MonoGame-Flappy-Fish--master\MonoGame-Flappy-Fish--master\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\Content\Images\fish2.xnb
+C:\Users\Kkim8301\Desktop\MonoGame-Flappy-Fish--master\MonoGame-Flappy-Fish--master\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\Content\Images\helpImage.xnb
+C:\Users\Kkim8301\Desktop\MonoGame-Flappy-Fish--master\MonoGame-Flappy-Fish--master\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\Content\Images\shark1.xnb
+C:\Users\Kkim8301\Desktop\MonoGame-Flappy-Fish--master\MonoGame-Flappy-Fish--master\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\Content\Images\shark2.xnb
+C:\Users\Kkim8301\Desktop\MonoGame-Flappy-Fish--master\MonoGame-Flappy-Fish--master\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\HKFinalProject.exe
+C:\Users\Kkim8301\Desktop\MonoGame-Flappy-Fish--master\MonoGame-Flappy-Fish--master\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\HKFinalProject.pdb
+C:\Users\Kkim8301\Desktop\MonoGame-Flappy-Fish--master\MonoGame-Flappy-Fish--master\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\MonoGame.Framework.dll
+C:\Users\Kkim8301\Desktop\MonoGame-Flappy-Fish--master\MonoGame-Flappy-Fish--master\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\SharpDX.MediaFoundation.dll
+C:\Users\Kkim8301\Desktop\MonoGame-Flappy-Fish--master\MonoGame-Flappy-Fish--master\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\SharpDX.dll
+C:\Users\Kkim8301\Desktop\MonoGame-Flappy-Fish--master\MonoGame-Flappy-Fish--master\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\SharpDX.XAudio2.dll
+C:\Users\Kkim8301\Desktop\MonoGame-Flappy-Fish--master\MonoGame-Flappy-Fish--master\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\SharpDX.DXGI.dll
+C:\Users\Kkim8301\Desktop\MonoGame-Flappy-Fish--master\MonoGame-Flappy-Fish--master\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\SharpDX.Direct3D11.dll
+C:\Users\Kkim8301\Desktop\MonoGame-Flappy-Fish--master\MonoGame-Flappy-Fish--master\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\SharpDX.Direct2D1.dll
+C:\Users\Kkim8301\Desktop\MonoGame-Flappy-Fish--master\MonoGame-Flappy-Fish--master\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\SharpDX.XInput.dll
+C:\Users\Kkim8301\Desktop\MonoGame-Flappy-Fish--master\MonoGame-Flappy-Fish--master\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\SharpDX.Direct3D9.dll
+C:\Users\Kkim8301\Desktop\MonoGame-Flappy-Fish--master\MonoGame-Flappy-Fish--master\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\MonoGame.Framework.xml
+C:\Users\Kkim8301\Desktop\MonoGame-Flappy-Fish--master\MonoGame-Flappy-Fish--master\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\SharpDX.MediaFoundation.xml
+C:\Users\Kkim8301\Desktop\MonoGame-Flappy-Fish--master\MonoGame-Flappy-Fish--master\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\SharpDX.xml
+C:\Users\Kkim8301\Desktop\MonoGame-Flappy-Fish--master\MonoGame-Flappy-Fish--master\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\SharpDX.XAudio2.xml
+C:\Users\Kkim8301\Desktop\MonoGame-Flappy-Fish--master\MonoGame-Flappy-Fish--master\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\SharpDX.DXGI.xml
+C:\Users\Kkim8301\Desktop\MonoGame-Flappy-Fish--master\MonoGame-Flappy-Fish--master\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\SharpDX.Direct3D11.xml
+C:\Users\Kkim8301\Desktop\MonoGame-Flappy-Fish--master\MonoGame-Flappy-Fish--master\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\SharpDX.Direct2D1.xml
+C:\Users\Kkim8301\Desktop\MonoGame-Flappy-Fish--master\MonoGame-Flappy-Fish--master\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\SharpDX.XInput.xml
+C:\Users\Kkim8301\Desktop\MonoGame-Flappy-Fish--master\MonoGame-Flappy-Fish--master\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\SharpDX.Direct3D9.xml
+C:\Users\Kkim8301\Desktop\MonoGame-Flappy-Fish--master\MonoGame-Flappy-Fish--master\FlappyFish\HKFinalProject\HKFinalProject\obj\x86\Debug\HKFinalProject.csprojResolveAssemblyReference.cache
+C:\Users\Kkim8301\Desktop\MonoGame-Flappy-Fish--master\MonoGame-Flappy-Fish--master\FlappyFish\HKFinalProject\HKFinalProject\obj\x86\Debug\HKFinalProject.exe
+C:\Users\Kkim8301\Desktop\MonoGame-Flappy-Fish--master\MonoGame-Flappy-Fish--master\FlappyFish\HKFinalProject\HKFinalProject\obj\x86\Debug\HKFinalProject.pdb
+C:\Users\Kkim8301\Desktop\MonoGame-Flappy-Fish--master\MonoGame-Flappy-Fish--master\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\Content\Images\background_menu1.xnb
+C:\Users\Kkim8301\Desktop\MonoGame-Flappy-Fish--master\MonoGame-Flappy-Fish--master\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\Content\Images\background_menu2.xnb
+C:\Users\Kkim8301\Desktop\MonoGame-Flappy-Fish--master\MonoGame-Flappy-Fish--master\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\Content\Images\help.xnb
+C:\Users\Kkim8301\Desktop\MonoGame-Flappy-Fish--master\MonoGame-Flappy-Fish--master\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\Content\Images\about.xnb
+C:\Users\Kkim8301\Desktop\MonoGame-Flappy-Fish--master\MonoGame-Flappy-Fish--master\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\Content\Images\highScore.xnb
+G:\Semester 3\GameProgramming\FinalProject\MonoGame-Flappy-Fish--master\MonoGame-Flappy-Fish--master\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\Content\Fonts\hilightFont.xnb
+G:\Semester 3\GameProgramming\FinalProject\MonoGame-Flappy-Fish--master\MonoGame-Flappy-Fish--master\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\Content\Fonts\regularFont.xnb
+G:\Semester 3\GameProgramming\FinalProject\MonoGame-Flappy-Fish--master\MonoGame-Flappy-Fish--master\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\Content\Images\about.xnb
+G:\Semester 3\GameProgramming\FinalProject\MonoGame-Flappy-Fish--master\MonoGame-Flappy-Fish--master\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\Content\Images\background.xnb
+G:\Semester 3\GameProgramming\FinalProject\MonoGame-Flappy-Fish--master\MonoGame-Flappy-Fish--master\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\Content\Images\backgroundTest.xnb
+G:\Semester 3\GameProgramming\FinalProject\MonoGame-Flappy-Fish--master\MonoGame-Flappy-Fish--master\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\Content\Images\background_menu1.xnb
+G:\Semester 3\GameProgramming\FinalProject\MonoGame-Flappy-Fish--master\MonoGame-Flappy-Fish--master\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\Content\Images\background_menu2.xnb
+G:\Semester 3\GameProgramming\FinalProject\MonoGame-Flappy-Fish--master\MonoGame-Flappy-Fish--master\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\Content\Images\Bat.xnb
+G:\Semester 3\GameProgramming\FinalProject\MonoGame-Flappy-Fish--master\MonoGame-Flappy-Fish--master\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\Content\Images\Fish.xnb
+G:\Semester 3\GameProgramming\FinalProject\MonoGame-Flappy-Fish--master\MonoGame-Flappy-Fish--master\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\Content\Images\fish1.xnb
+G:\Semester 3\GameProgramming\FinalProject\MonoGame-Flappy-Fish--master\MonoGame-Flappy-Fish--master\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\Content\Images\fish2.xnb
+G:\Semester 3\GameProgramming\FinalProject\MonoGame-Flappy-Fish--master\MonoGame-Flappy-Fish--master\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\Content\Images\help.xnb
+G:\Semester 3\GameProgramming\FinalProject\MonoGame-Flappy-Fish--master\MonoGame-Flappy-Fish--master\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\Content\Images\helpImage.xnb
+G:\Semester 3\GameProgramming\FinalProject\MonoGame-Flappy-Fish--master\MonoGame-Flappy-Fish--master\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\Content\Images\highScore.xnb
+G:\Semester 3\GameProgramming\FinalProject\MonoGame-Flappy-Fish--master\MonoGame-Flappy-Fish--master\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\Content\Images\shark1.xnb
+G:\Semester 3\GameProgramming\FinalProject\MonoGame-Flappy-Fish--master\MonoGame-Flappy-Fish--master\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\Content\Images\shark2.xnb
+G:\Semester 3\GameProgramming\FinalProject\MonoGame-Flappy-Fish--master\MonoGame-Flappy-Fish--master\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\HKFinalProject.exe
+G:\Semester 3\GameProgramming\FinalProject\MonoGame-Flappy-Fish--master\MonoGame-Flappy-Fish--master\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\HKFinalProject.pdb
+G:\Semester 3\GameProgramming\FinalProject\MonoGame-Flappy-Fish--master\MonoGame-Flappy-Fish--master\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\MonoGame.Framework.dll
+G:\Semester 3\GameProgramming\FinalProject\MonoGame-Flappy-Fish--master\MonoGame-Flappy-Fish--master\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\SharpDX.MediaFoundation.dll
+G:\Semester 3\GameProgramming\FinalProject\MonoGame-Flappy-Fish--master\MonoGame-Flappy-Fish--master\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\SharpDX.dll
+G:\Semester 3\GameProgramming\FinalProject\MonoGame-Flappy-Fish--master\MonoGame-Flappy-Fish--master\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\SharpDX.XAudio2.dll
+G:\Semester 3\GameProgramming\FinalProject\MonoGame-Flappy-Fish--master\MonoGame-Flappy-Fish--master\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\SharpDX.DXGI.dll
+G:\Semester 3\GameProgramming\FinalProject\MonoGame-Flappy-Fish--master\MonoGame-Flappy-Fish--master\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\SharpDX.Direct3D11.dll
+G:\Semester 3\GameProgramming\FinalProject\MonoGame-Flappy-Fish--master\MonoGame-Flappy-Fish--master\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\SharpDX.Direct2D1.dll
+G:\Semester 3\GameProgramming\FinalProject\MonoGame-Flappy-Fish--master\MonoGame-Flappy-Fish--master\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\SharpDX.XInput.dll
+G:\Semester 3\GameProgramming\FinalProject\MonoGame-Flappy-Fish--master\MonoGame-Flappy-Fish--master\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\SharpDX.Direct3D9.dll
+G:\Semester 3\GameProgramming\FinalProject\MonoGame-Flappy-Fish--master\MonoGame-Flappy-Fish--master\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\MonoGame.Framework.xml
+G:\Semester 3\GameProgramming\FinalProject\MonoGame-Flappy-Fish--master\MonoGame-Flappy-Fish--master\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\SharpDX.MediaFoundation.xml
+G:\Semester 3\GameProgramming\FinalProject\MonoGame-Flappy-Fish--master\MonoGame-Flappy-Fish--master\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\SharpDX.xml
+G:\Semester 3\GameProgramming\FinalProject\MonoGame-Flappy-Fish--master\MonoGame-Flappy-Fish--master\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\SharpDX.XAudio2.xml
+G:\Semester 3\GameProgramming\FinalProject\MonoGame-Flappy-Fish--master\MonoGame-Flappy-Fish--master\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\SharpDX.DXGI.xml
+G:\Semester 3\GameProgramming\FinalProject\MonoGame-Flappy-Fish--master\MonoGame-Flappy-Fish--master\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\SharpDX.Direct3D11.xml
+G:\Semester 3\GameProgramming\FinalProject\MonoGame-Flappy-Fish--master\MonoGame-Flappy-Fish--master\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\SharpDX.Direct2D1.xml
+G:\Semester 3\GameProgramming\FinalProject\MonoGame-Flappy-Fish--master\MonoGame-Flappy-Fish--master\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\SharpDX.XInput.xml
+G:\Semester 3\GameProgramming\FinalProject\MonoGame-Flappy-Fish--master\MonoGame-Flappy-Fish--master\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\SharpDX.Direct3D9.xml
+G:\Semester 3\GameProgramming\FinalProject\MonoGame-Flappy-Fish--master\MonoGame-Flappy-Fish--master\FlappyFish\HKFinalProject\HKFinalProject\obj\x86\Debug\HKFinalProject.csprojResolveAssemblyReference.cache
+G:\Semester 3\GameProgramming\FinalProject\MonoGame-Flappy-Fish--master\MonoGame-Flappy-Fish--master\FlappyFish\HKFinalProject\HKFinalProject\obj\x86\Debug\HKFinalProject.exe
+G:\Semester 3\GameProgramming\FinalProject\MonoGame-Flappy-Fish--master\MonoGame-Flappy-Fish--master\FlappyFish\HKFinalProject\HKFinalProject\obj\x86\Debug\HKFinalProject.pdb
+C:\Users\RIM\Downloads\MonoGame-Flappy-Fish--master\MonoGame-Flappy-Fish--master\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\Content\Fonts\hilightFont.xnb
+C:\Users\RIM\Downloads\MonoGame-Flappy-Fish--master\MonoGame-Flappy-Fish--master\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\Content\Fonts\regularFont.xnb
+C:\Users\RIM\Downloads\MonoGame-Flappy-Fish--master\MonoGame-Flappy-Fish--master\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\Content\Images\about.xnb
+C:\Users\RIM\Downloads\MonoGame-Flappy-Fish--master\MonoGame-Flappy-Fish--master\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\Content\Images\background.xnb
+C:\Users\RIM\Downloads\MonoGame-Flappy-Fish--master\MonoGame-Flappy-Fish--master\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\Content\Images\backgroundTest.xnb
+C:\Users\RIM\Downloads\MonoGame-Flappy-Fish--master\MonoGame-Flappy-Fish--master\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\Content\Images\background_menu1.xnb
+C:\Users\RIM\Downloads\MonoGame-Flappy-Fish--master\MonoGame-Flappy-Fish--master\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\Content\Images\background_menu2.xnb
+C:\Users\RIM\Downloads\MonoGame-Flappy-Fish--master\MonoGame-Flappy-Fish--master\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\Content\Images\Bat.xnb
+C:\Users\RIM\Downloads\MonoGame-Flappy-Fish--master\MonoGame-Flappy-Fish--master\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\Content\Images\Fish.xnb
+C:\Users\RIM\Downloads\MonoGame-Flappy-Fish--master\MonoGame-Flappy-Fish--master\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\Content\Images\fish1.xnb
+C:\Users\RIM\Downloads\MonoGame-Flappy-Fish--master\MonoGame-Flappy-Fish--master\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\Content\Images\fish2.xnb
+C:\Users\RIM\Downloads\MonoGame-Flappy-Fish--master\MonoGame-Flappy-Fish--master\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\Content\Images\help.xnb
+C:\Users\RIM\Downloads\MonoGame-Flappy-Fish--master\MonoGame-Flappy-Fish--master\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\Content\Images\helpImage.xnb
+C:\Users\RIM\Downloads\MonoGame-Flappy-Fish--master\MonoGame-Flappy-Fish--master\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\Content\Images\highScore.xnb
+C:\Users\RIM\Downloads\MonoGame-Flappy-Fish--master\MonoGame-Flappy-Fish--master\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\Content\Images\shark1.xnb
+C:\Users\RIM\Downloads\MonoGame-Flappy-Fish--master\MonoGame-Flappy-Fish--master\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\Content\Images\shark2.xnb
+C:\Users\RIM\Downloads\MonoGame-Flappy-Fish--master\MonoGame-Flappy-Fish--master\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\HKFinalProject.exe
+C:\Users\RIM\Downloads\MonoGame-Flappy-Fish--master\MonoGame-Flappy-Fish--master\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\HKFinalProject.pdb
+C:\Users\RIM\Downloads\MonoGame-Flappy-Fish--master\MonoGame-Flappy-Fish--master\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\MonoGame.Framework.dll
+C:\Users\RIM\Downloads\MonoGame-Flappy-Fish--master\MonoGame-Flappy-Fish--master\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\SharpDX.MediaFoundation.dll
+C:\Users\RIM\Downloads\MonoGame-Flappy-Fish--master\MonoGame-Flappy-Fish--master\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\SharpDX.dll
+C:\Users\RIM\Downloads\MonoGame-Flappy-Fish--master\MonoGame-Flappy-Fish--master\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\SharpDX.XAudio2.dll
+C:\Users\RIM\Downloads\MonoGame-Flappy-Fish--master\MonoGame-Flappy-Fish--master\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\SharpDX.DXGI.dll
+C:\Users\RIM\Downloads\MonoGame-Flappy-Fish--master\MonoGame-Flappy-Fish--master\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\SharpDX.Direct3D11.dll
+C:\Users\RIM\Downloads\MonoGame-Flappy-Fish--master\MonoGame-Flappy-Fish--master\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\SharpDX.Direct2D1.dll
+C:\Users\RIM\Downloads\MonoGame-Flappy-Fish--master\MonoGame-Flappy-Fish--master\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\SharpDX.XInput.dll
+C:\Users\RIM\Downloads\MonoGame-Flappy-Fish--master\MonoGame-Flappy-Fish--master\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\SharpDX.Direct3D9.dll
+C:\Users\RIM\Downloads\MonoGame-Flappy-Fish--master\MonoGame-Flappy-Fish--master\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\MonoGame.Framework.xml
+C:\Users\RIM\Downloads\MonoGame-Flappy-Fish--master\MonoGame-Flappy-Fish--master\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\SharpDX.MediaFoundation.xml
+C:\Users\RIM\Downloads\MonoGame-Flappy-Fish--master\MonoGame-Flappy-Fish--master\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\SharpDX.xml
+C:\Users\RIM\Downloads\MonoGame-Flappy-Fish--master\MonoGame-Flappy-Fish--master\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\SharpDX.XAudio2.xml
+C:\Users\RIM\Downloads\MonoGame-Flappy-Fish--master\MonoGame-Flappy-Fish--master\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\SharpDX.DXGI.xml
+C:\Users\RIM\Downloads\MonoGame-Flappy-Fish--master\MonoGame-Flappy-Fish--master\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\SharpDX.Direct3D11.xml
+C:\Users\RIM\Downloads\MonoGame-Flappy-Fish--master\MonoGame-Flappy-Fish--master\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\SharpDX.Direct2D1.xml
+C:\Users\RIM\Downloads\MonoGame-Flappy-Fish--master\MonoGame-Flappy-Fish--master\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\SharpDX.XInput.xml
+C:\Users\RIM\Downloads\MonoGame-Flappy-Fish--master\MonoGame-Flappy-Fish--master\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\SharpDX.Direct3D9.xml
+C:\Users\RIM\Downloads\MonoGame-Flappy-Fish--master\MonoGame-Flappy-Fish--master\FlappyFish\HKFinalProject\HKFinalProject\obj\x86\Debug\HKFinalProject.csprojResolveAssemblyReference.cache
+C:\Users\RIM\Downloads\MonoGame-Flappy-Fish--master\MonoGame-Flappy-Fish--master\FlappyFish\HKFinalProject\HKFinalProject\obj\x86\Debug\HKFinalProject.csproj.CoreCompileInputs.cache
+C:\Users\RIM\Downloads\MonoGame-Flappy-Fish--master\MonoGame-Flappy-Fish--master\FlappyFish\HKFinalProject\HKFinalProject\obj\x86\Debug\HKFinalProject.exe
+C:\Users\RIM\Downloads\MonoGame-Flappy-Fish--master\MonoGame-Flappy-Fish--master\FlappyFish\HKFinalProject\HKFinalProject\obj\x86\Debug\HKFinalProject.pdb
+C:\Users\RIM\Documents\MonoGame-Flappy-Fish-\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\Content\Images\about.xnb
+C:\Users\RIM\Documents\MonoGame-Flappy-Fish-\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\Content\Images\background_menu1.xnb
+C:\Users\RIM\Documents\MonoGame-Flappy-Fish-\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\Content\Images\background_menu2.xnb
+C:\Users\RIM\Documents\MonoGame-Flappy-Fish-\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\Content\Images\help.xnb
+C:\Users\RIM\Documents\MonoGame-Flappy-Fish-\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\Content\Images\highScore.xnb

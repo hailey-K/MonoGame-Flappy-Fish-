@@ -21,10 +21,8 @@ namespace HKFinalProject
         private StartScene startScene;
         private ActionScene actionScene;
         private HelpScene helpScene;
-        // others....
-
-
-
+        private HighScoreScene highScoreScene;
+        private AboutScene aboutScene;
 
         public Game1()
         {
@@ -86,7 +84,11 @@ namespace HKFinalProject
             helpScene = new HelpScene(this);
             this.Components.Add(helpScene);
 
-            // others.....
+            highScoreScene = new HighScoreScene(this);
+            this.Components.Add(highScoreScene);
+
+            aboutScene = new AboutScene(this);
+            this.Components.Add(aboutScene);
         }
 
         /// <summary>
@@ -122,6 +124,16 @@ namespace HKFinalProject
                     hideAllScenes();
                     helpScene.show();
                 }
+                else if (selectedIndex == 2 && ks.IsKeyDown(Keys.Enter))
+                {
+                    hideAllScenes();
+                    highScoreScene.show();
+                }
+                else if (selectedIndex == 3 && ks.IsKeyDown(Keys.Enter))
+                {
+                    hideAllScenes();
+                    aboutScene.show();
+                }
                 //handle other menu options
                 else if (selectedIndex == 4 && ks.IsKeyDown(Keys.Enter))
                 {
@@ -129,7 +141,7 @@ namespace HKFinalProject
                 }
             }
 
-            if (actionScene.Enabled || helpScene.Enabled)
+            if (actionScene.Enabled || helpScene.Enabled || highScoreScene.Enabled || aboutScene.Enabled)
             {
                 if (ks.IsKeyDown(Keys.Escape))
                 {
@@ -137,8 +149,6 @@ namespace HKFinalProject
                     startScene.show();
                 }
             }
-
-
             // TODO: Add your update logic here
 
             base.Update(gameTime);

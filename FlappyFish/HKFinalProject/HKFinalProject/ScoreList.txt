@@ -1,0 +1,3 @@
+HYERIM KIM,100
+Se B,90
+Test a,80
