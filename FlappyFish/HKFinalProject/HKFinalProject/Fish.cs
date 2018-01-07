@@ -15,7 +15,7 @@ namespace HKFinalProject
         private SpriteBatch spriteBatch;
         ContentManager content;
         public List<Rectangle> fishRec;
-        Rectangle fish;
+        public Rectangle fish;
         List<Texture2D> fishTex;
         int currentFrame = 0;
         bool isJumping = false;

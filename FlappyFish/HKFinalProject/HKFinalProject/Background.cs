@@ -17,11 +17,12 @@ namespace HKFinalProject
         // public Rectangle backgroundRec;
         public Rectangle backgroundRec1, backgroundRec2;
         public Texture2D backgroundTex;
-
-        public Background(Game game, SpriteBatch spriteBatch, ContentManager content) : base(game)
+        string imageSource;
+        public Background(Game game, SpriteBatch spriteBatch, ContentManager content, string imageSource) : base(game)
         {
             this.content = content;
             this.spriteBatch = spriteBatch;
+            this.imageSource = imageSource;
             Initialize();
             LoadContent();
         }
@@ -33,12 +34,11 @@ namespace HKFinalProject
         }
         protected override void LoadContent()
         {
-            backgroundTex = content.Load<Texture2D>("Images/background");
+            backgroundTex = content.Load<Texture2D>(imageSource);
             base.LoadContent();
         }
         public override void Update(GameTime gameTime)
         {
-
             if (backgroundRec1.X + backgroundRec1.Width <= 0)
             {
                 backgroundRec1.X = backgroundRec2.X+ backgroundRec2.Width;

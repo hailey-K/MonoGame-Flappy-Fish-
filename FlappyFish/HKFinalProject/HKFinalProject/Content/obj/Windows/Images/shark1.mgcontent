@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>C:/Users/RIM/Downloads/MonoGame-Flappy-Fish--master/MonoGame-Flappy-Fish--master/FlappyFish/HKFinalProject/HKFinalProject/Content/Images/shark1.png</SourceFile>
+  <SourceFile>C:/Users/RIM/Documents/MonoGame-Flappy-Fish-/FlappyFish/HKFinalProject/HKFinalProject/Content/Images/shark1.png</SourceFile>
   <SourceTime>2018-01-06T19:43:36-05:00</SourceTime>
-  <DestFile>C:/Users/RIM/Downloads/MonoGame-Flappy-Fish--master/MonoGame-Flappy-Fish--master/FlappyFish/HKFinalProject/HKFinalProject/Content/bin/Windows/Images/shark1.xnb</DestFile>
-  <DestTime>2018-01-06T22:45:16.6885157-05:00</DestTime>
+  <DestFile>C:/Users/RIM/Documents/MonoGame-Flappy-Fish-/FlappyFish/HKFinalProject/HKFinalProject/Content/bin/Windows/Images/shark1.xnb</DestFile>
+  <DestTime>2018-01-07T00:10:47.5920909-05:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2017-03-01T10:05:36-05:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

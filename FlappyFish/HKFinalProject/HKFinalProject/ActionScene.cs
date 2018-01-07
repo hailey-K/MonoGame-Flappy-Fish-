@@ -16,16 +16,19 @@ namespace HKFinalProject
         private Fish fish;
         private List<Shark> sharks = new List<Shark>();
         private Background background;
+        private Score score;
         private Random rd = new Random();
         private Game1 g;
         private ContentManager Content;
+        private bool hasChangeBackground = false;
         public ActionScene(Game game) : base(game)
         {
            g = (Game1)game;
             this.spriteBatch = g.spriteBatch;
             Content = game.Content;
             fish = new Fish(game, spriteBatch, Content);
-            background = new Background(game, spriteBatch, Content);
+            background = new Background(game, spriteBatch, Content, "Images/background");
+            score = new Score(game, spriteBatch, Content);
             this.Components.Add(fish);
         }
         float interval = 0;
@@ -33,7 +36,12 @@ namespace HKFinalProject
         {
             interval += (float)gameTime.ElapsedGameTime.TotalSeconds;
             background.Update(gameTime);
-
+            score.Update(gameTime);
+            if (score.score >= 500 && !hasChangeBackground)
+            { 
+                background = new Background(g, spriteBatch, Content, "Images/backgroundLevel2");
+                hasChangeBackground = true;
+            }
             foreach (Shark shark in sharks)
             {
                 shark.Update(gameTime);
@@ -67,6 +75,7 @@ namespace HKFinalProject
         {
            background.Draw(gameTime);
             fish.Draw(gameTime);
+            score.Draw(gameTime);
             foreach (Shark shark in sharks)
             {
                 shark.Draw(gameTime);
