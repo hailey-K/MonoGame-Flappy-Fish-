@@ -20,17 +20,17 @@ namespace HKFinalProject
         int frameDelay = 0;
         readonly int sharkHeight = 110;
         readonly int sharkWidth = 120;
-        readonly int speed = 3;
+        readonly int speed = 4;
 
-        int sharkPositionX;
-        int sharkPositionY=50;
-
-        public Shark(Game game, SpriteBatch spriteBatch, ContentManager content) : base(game)
+        public int sharkPositionX;
+        public int sharkPositionY;
+        public Shark(Game game, SpriteBatch spriteBatch, ContentManager content, int sharkPositionY) : base(game)
         {
             this.spriteBatch = spriteBatch;
             this.content = content;
             sharkTex = new List<Texture2D>();
-            sharkPositionX = GraphicsDevice.Viewport.Width - sharkWidth;
+            this.sharkPositionY = sharkPositionY;
+           sharkPositionX = GraphicsDevice.Viewport.Width - sharkWidth;
             shark = new Rectangle(sharkPositionX, sharkPositionY, sharkWidth, sharkHeight);
             LoadContent();
         }
@@ -51,6 +51,7 @@ namespace HKFinalProject
                     sharkPositionY -= 3;
                 }
             }
+
             shark = new Rectangle(sharkPositionX, sharkPositionY, sharkWidth, sharkHeight);
             base.Update(gameTime);
         }

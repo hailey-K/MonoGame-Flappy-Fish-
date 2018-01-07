@@ -19,7 +19,7 @@ namespace HKFinalProject
         List<Texture2D> fishTex;
         int currentFrame = 0;
         bool isJumping = false;
-        int jumpPower=-20;
+        int jumpPower=-15;
         readonly int fishkHeight = 90;
         readonly int fishWidth = 85;
         public Fish(Game game, SpriteBatch spriteBatch, ContentManager content) : base(game)
@@ -61,12 +61,12 @@ namespace HKFinalProject
                 else
                 { 
                     isJumping = false;
-                    jumpPower = -20;
+                    jumpPower = -15;
                 }
             }
             else
             {
-                fish.Y += 4;
+                fish.Y += 5;
                 currentFrame = 0;
             }
 
