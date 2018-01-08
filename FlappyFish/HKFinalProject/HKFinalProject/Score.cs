@@ -35,7 +35,7 @@ namespace HKFinalProject
                 frameDelay = 0;                 //reset the frame counter
                 score++;
             }
-                base.Update(gameTime);
+            base.Update(gameTime);
         }
 
         public override void Draw(GameTime gameTime)

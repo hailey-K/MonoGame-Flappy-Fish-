@@ -14,6 +14,7 @@ namespace HKFinalProject
     {
         private SpriteBatch spriteBatch;
         private Fish fish;
+        private SpriteFont gameOverLabel;
         private List<Shark> sharks = new List<Shark>();
         private Background background;
         private Score score;
@@ -21,6 +22,8 @@ namespace HKFinalProject
         private Game1 g;
         private ContentManager Content;
         private bool hasChangeBackground = false;
+        private float intervalTimer = 1;
+        private bool isFishAlive = true;
         public ActionScene(Game game) : base(game)
         {
            g = (Game1)game;
@@ -29,36 +32,49 @@ namespace HKFinalProject
             fish = new Fish(game, spriteBatch, Content);
             background = new Background(game, spriteBatch, Content, "Images/background");
             score = new Score(game, spriteBatch, Content);
+            gameOverLabel = Content.Load<SpriteFont>("Fonts/hilightFont");
             this.Components.Add(fish);
         }
         float interval = 0;
         public override void Update(GameTime gameTime)
         {
             interval += (float)gameTime.ElapsedGameTime.TotalSeconds;
-            background.Update(gameTime);
-            score.Update(gameTime);
-            if (score.score >= 500 && !hasChangeBackground)
+            //fish die
+            if (fish.fish.Y >= GraphicsDevice.Viewport.Height)
+            {
+                isFishAlive = false;
+            }
+            else
+            {
+                background.Update(gameTime);
+                score.Update(gameTime);
+
+                if (score.score >= 400 && !hasChangeBackground)
             { 
                 background = new Background(g, spriteBatch, Content, "Images/backgroundLevel2");
                 hasChangeBackground = true;
             }
             foreach (Shark shark in sharks)
             {
+                if (hasChangeBackground)
+                    shark.setSpeed(10);
                 shark.Update(gameTime);
             }
             LoadShark();
-
+            }
             base.Update(gameTime);
         }
         public void LoadShark()
         {
 
-            int sharkY = rd.Next(110, GraphicsDevice.Viewport.Height - 110);
+            int sharkY = rd.Next(0, GraphicsDevice.Viewport.Height - 110);
+            if (hasChangeBackground)
+                intervalTimer = 0.5f;
 
-            if (interval >= 1)
+            if (interval >= intervalTimer)
             {
                 interval = 0;
-                if (sharks.Count < 5)
+                if (sharks.Count < 7)
                     sharks.Add(new Shark(g, spriteBatch, Content, sharkY));
             }
 
@@ -73,14 +89,21 @@ namespace HKFinalProject
         }
         public override void Draw(GameTime gameTime)
         {
-           background.Draw(gameTime);
+           
+
+            background.Draw(gameTime);
             fish.Draw(gameTime);
             score.Draw(gameTime);
             foreach (Shark shark in sharks)
             {
                 shark.Draw(gameTime);
             }
-
+            if (!isFishAlive)
+            {
+                spriteBatch.Begin();
+                spriteBatch.DrawString(gameOverLabel, "Game Over", new Vector2(GraphicsDevice.Viewport.Width / 2, GraphicsDevice.Viewport.Height / 2), Color.Red);
+                spriteBatch.End();
+            }
             base.Draw(gameTime);
         }
     }

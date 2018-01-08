@@ -20,7 +20,7 @@ namespace HKFinalProject
         int frameDelay = 0;
         readonly int sharkHeight = 110;
         readonly int sharkWidth = 120;
-        readonly int speed = 4;
+        int speed = 5;
 
         public int sharkPositionX;
         public int sharkPositionY;
@@ -55,7 +55,10 @@ namespace HKFinalProject
             shark = new Rectangle(sharkPositionX, sharkPositionY, sharkWidth, sharkHeight);
             base.Update(gameTime);
         }
-
+        public void setSpeed(int speed)
+        {
+            this.speed = speed;
+        }
         public override void Draw(GameTime gameTime)
         {
             spriteBatch.Begin();
