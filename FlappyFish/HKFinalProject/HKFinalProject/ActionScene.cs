@@ -44,7 +44,14 @@ namespace HKFinalProject
             {
                 isFishAlive = false;
             }
-            else
+            //foreach (Shark shark in sharks)
+            //{
+            //    if ((fish.fish.X+fish.fish.Width >= shark.sharkPositionX && fish.fish.X <= shark.sharkPositionX+shark.sharkWidth) && (fish.fish.Y >= shark.sharkPositionY-fish.fish.Height && fish.fish.Y+fish.fish.Height <= shark.sharkPositionY+shark.sharkHeight))
+            //        isFishAlive = false;
+         
+            //}
+
+            if (isFishAlive)
             {
                 background.Update(gameTime);
                 score.Update(gameTime);
@@ -58,7 +65,8 @@ namespace HKFinalProject
             {
                 if (hasChangeBackground)
                     shark.setSpeed(10);
-                shark.Update(gameTime);
+                
+                    shark.Update(gameTime);
             }
             LoadShark();
             }

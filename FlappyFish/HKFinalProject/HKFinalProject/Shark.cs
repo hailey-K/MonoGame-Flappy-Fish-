@@ -18,8 +18,8 @@ namespace HKFinalProject
         int currentFrame = 0;
         const int FRAMEDELAYTIMER = 10;          //how many game loop iterations before we  
         int frameDelay = 0;
-        readonly int sharkHeight = 110;
-        readonly int sharkWidth = 120;
+        public readonly int sharkHeight = 110;
+        public readonly int sharkWidth = 120;
         int speed = 5;
 
         public int sharkPositionX;
