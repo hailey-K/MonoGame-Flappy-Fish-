@@ -117,6 +117,7 @@ namespace HKFinalProject
                 if (selectedIndex == 0 && ks.IsKeyDown(Keys.Enter))
                 {
                     hideAllScenes();
+                    actionScene.ReStartGame();
                     actionScene.show();
                 }
                 else if (selectedIndex == 1 && ks.IsKeyDown(Keys.Enter))

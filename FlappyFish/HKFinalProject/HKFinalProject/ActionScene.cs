@@ -24,16 +24,28 @@ namespace HKFinalProject
         private bool hasChangeBackground = false;
         private float intervalTimer = 1;
         private bool isFishAlive = true;
+        private bool hasFishDropped = false;
+        private Rectangle scoreBoard;
+        private Texture2D SaveScoreTex;
+
         public ActionScene(Game game) : base(game)
         {
-           g = (Game1)game;
+            g = (Game1)game;
             this.spriteBatch = g.spriteBatch;
-            Content = game.Content;
-            fish = new Fish(game, spriteBatch, Content);
-            background = new Background(game, spriteBatch, Content, "Images/background");
-            score = new Score(game, spriteBatch, Content);
-            gameOverLabel = Content.Load<SpriteFont>("Fonts/hilightFont");
+            Initialize();
             this.Components.Add(fish);
+        }
+        public override void Initialize()
+        {
+            Content = g.Content;
+            fish = new Fish(g, spriteBatch, Content);
+            background = new Background(g, spriteBatch, Content, "Images/background");
+            score = new Score(g, spriteBatch, Content);
+            gameOverLabel = Content.Load<SpriteFont>("Fonts/hilightFont");
+            scoreBoard = new Rectangle(100, 150, GraphicsDevice.Viewport.Width - 200, GraphicsDevice.Viewport.Height - 300);
+            SaveScoreTex = Content.Load<Texture2D>("Images/SaveScore");
+            ReStartGame();
+            base.Initialize();
         }
         float interval = 0;
         public override void Update(GameTime gameTime)
@@ -43,13 +55,13 @@ namespace HKFinalProject
             if (fish.fish.Y >= GraphicsDevice.Viewport.Height)
             {
                 isFishAlive = false;
+                hasFishDropped = true;
             }
-            //foreach (Shark shark in sharks)
-            //{
-            //    if ((fish.fish.X+fish.fish.Width >= shark.sharkPositionX && fish.fish.X <= shark.sharkPositionX+shark.sharkWidth) && (fish.fish.Y >= shark.sharkPositionY-fish.fish.Height && fish.fish.Y+fish.fish.Height <= shark.sharkPositionY+shark.sharkHeight))
-            //        isFishAlive = false;
-         
-            //}
+            foreach (Shark shark in sharks)
+            {
+                if ((fish.fish.X >= shark.sharkPositionX - fish.fish.Width && fish.fish.X <= shark.sharkPositionX + shark.sharkWidth) && (fish.fish.Y >= shark.sharkPositionY - fish.fish.Height && fish.fish.Y <= shark.sharkPositionY + shark.sharkHeight))
+                    isFishAlive = false;
+            }
 
             if (isFishAlive)
             {
@@ -57,20 +69,33 @@ namespace HKFinalProject
                 score.Update(gameTime);
 
                 if (score.score >= 400 && !hasChangeBackground)
-            { 
-                background = new Background(g, spriteBatch, Content, "Images/backgroundLevel2");
-                hasChangeBackground = true;
-            }
-            foreach (Shark shark in sharks)
-            {
-                if (hasChangeBackground)
-                    shark.setSpeed(10);
-                
+                {
+                    background = new Background(g, spriteBatch, Content, "Images/backgroundLevel2");
+                    hasChangeBackground = true;
+                }
+                foreach (Shark shark in sharks)
+                {
+                    if (hasChangeBackground)
+                        shark.setSpeed(10);
+
                     shark.Update(gameTime);
-            }
-            LoadShark();
+                }
+                LoadShark();
             }
             base.Update(gameTime);
+        }
+    
+        public void ReStartGame()
+        {
+            for (int i = 0; i < sharks.Count; i++)
+            {
+                sharks.RemoveAt(i);
+                i--;
+            }
+            isFishAlive = true;
+            fish.fish.X = 50;
+            fish.fish.Y = 50;
+            hasFishDropped = false;
         }
         public void LoadShark()
         {
@@ -97,8 +122,6 @@ namespace HKFinalProject
         }
         public override void Draw(GameTime gameTime)
         {
-           
-
             background.Draw(gameTime);
             fish.Draw(gameTime);
             score.Draw(gameTime);
@@ -106,10 +129,13 @@ namespace HKFinalProject
             {
                 shark.Draw(gameTime);
             }
-            if (!isFishAlive)
+            if (hasFishDropped)
             {
                 spriteBatch.Begin();
-                spriteBatch.DrawString(gameOverLabel, "Game Over", new Vector2(GraphicsDevice.Viewport.Width / 2, GraphicsDevice.Viewport.Height / 2), Color.Red);
+               scoreBoard = new Rectangle(100, 150, GraphicsDevice.Viewport.Width - 200, GraphicsDevice.Viewport.Height - 300);
+                spriteBatch.Draw(SaveScoreTex,scoreBoard, Color.White);
+               
+                //spriteBatch.DrawString(gameOverLabel, "Game Over", new Vector2(GraphicsDevice.Viewport.Width / 2, GraphicsDevice.Viewport.Height / 2), Color.Red);
                 spriteBatch.End();
             }
             base.Draw(gameTime);

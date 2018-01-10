@@ -26,6 +26,10 @@ namespace HKFinalProject
         {
             this.spriteBatch = spriteBatch;
             this.content = content;
+            Initialize();
+        }
+        public override void Initialize()
+        {
             fishRec = new List<Rectangle>();
             fishTex = new List<Texture2D>();
             fish = new Rectangle(50, 50, fishWidth, fishkHeight);
@@ -33,6 +37,7 @@ namespace HKFinalProject
             Rectangle fish2 = new Rectangle(50, 50, fishWidth, fishkHeight);
             fishRec.Add(fish1);
             fishRec.Add(fish2);
+            base.Initialize();
             LoadContent();
         }
         public override void Update(GameTime gameTime)
@@ -92,5 +97,7 @@ namespace HKFinalProject
 
             base.LoadContent();
         }
+
+     
     }
 }

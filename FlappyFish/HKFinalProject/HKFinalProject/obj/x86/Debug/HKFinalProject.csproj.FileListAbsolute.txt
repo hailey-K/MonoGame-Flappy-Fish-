@@ -297,3 +297,4 @@ G:\Git\SharkCollision\FlappyFish\HKFinalProject\HKFinalProject\obj\x86\Debug\HKF
 G:\Git\SharkCollision\FlappyFish\HKFinalProject\HKFinalProject\obj\x86\Debug\HKFinalProject.csproj.CoreCompileInputs.cache
 G:\Git\SharkCollision\FlappyFish\HKFinalProject\HKFinalProject\obj\x86\Debug\HKFinalProject.exe
 G:\Git\SharkCollision\FlappyFish\HKFinalProject\HKFinalProject\obj\x86\Debug\HKFinalProject.pdb
+C:\Users\RIM\Documents\MonoGame-Flappy-Fish-\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\Content\Images\SaveScore.xnb
