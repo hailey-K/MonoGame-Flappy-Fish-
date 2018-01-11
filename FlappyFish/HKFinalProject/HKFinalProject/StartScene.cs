@@ -23,23 +23,25 @@ namespace HKFinalProject
                                 "High Score",
                                 "About",
                                 "Quit"};
+        SpriteFont title;
+        Game1 g;
         public StartScene(Game game) : base(game)
         {
-            Game1 g = (Game1)game;
+            g = (Game1)game;
             
             ContentManager Content = game.Content;
             this.spriteBatch = g.spriteBatch;
             SpriteFont regularFont = g.Content.Load<SpriteFont>("Fonts/regularFont");
             SpriteFont highlightFont = game.Content.Load<SpriteFont>("Fonts/hilightFont");
             menuBackground = new MenuBackground(game, spriteBatch, Content);
-
+            title = Content.Load<SpriteFont>("Fonts/title");
             Menu = new MenuComponent(game, spriteBatch, regularFont, highlightFont, menuItems);
             this.Components.Add(Menu);
-
         }
 
         public override void Update(GameTime gameTime)
         {
+            g.setPressedESC(false);
             menuBackground.Update(gameTime);
             base.Update(gameTime);
         }
@@ -47,6 +49,9 @@ namespace HKFinalProject
         public override void Draw(GameTime gameTime)
         {
             menuBackground.Draw(gameTime);
+            spriteBatch.Begin();
+            spriteBatch.DrawString(title, "Flappy Fish", new Vector2(300, 150), Color.White);
+            spriteBatch.End();
             base.Draw(gameTime);
         }
     }

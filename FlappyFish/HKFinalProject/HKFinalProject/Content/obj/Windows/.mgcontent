@@ -22,5 +22,10 @@
     <File>C:/Users/RIM/Documents/MonoGame-Flappy-Fish-/FlappyFish/HKFinalProject/HKFinalProject/Content/Images/highScore.png</File>
     <File>C:/Users/RIM/Documents/MonoGame-Flappy-Fish-/FlappyFish/HKFinalProject/HKFinalProject/Content/Images/backgroundLevel2.png</File>
     <File>C:/Users/RIM/Documents/MonoGame-Flappy-Fish-/FlappyFish/HKFinalProject/HKFinalProject/Content/Images/SaveScore.png</File>
+    <File>C:/Users/RIM/Documents/MonoGame-Flappy-Fish-/FlappyFish/HKFinalProject/HKFinalProject/Content/Images/EditBar.png</File>
+    <File>C:/Users/RIM/Documents/MonoGame-Flappy-Fish-/FlappyFish/HKFinalProject/HKFinalProject/Content/Fonts/Title.spritefont</File>
+    <File>C:/Users/RIM/Documents/MonoGame-Flappy-Fish-/FlappyFish/HKFinalProject/HKFinalProject/Content/Images/fishDead.png</File>
+    <File>C:/Users/RIM/Documents/MonoGame-Flappy-Fish-/FlappyFish/HKFinalProject/HKFinalProject/Content/Images/fishScared.png</File>
+    <File>C:/Users/RIM/Documents/MonoGame-Flappy-Fish-/FlappyFish/HKFinalProject/HKFinalProject/Content/Fonts/writtingFont.spritefont</File>
   </SourceFiles>
 </SourceFileCollection>

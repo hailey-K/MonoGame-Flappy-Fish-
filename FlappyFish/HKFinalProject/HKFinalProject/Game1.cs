@@ -23,7 +23,9 @@ namespace HKFinalProject
         private HelpScene helpScene;
         private HighScoreScene highScoreScene;
         private AboutScene aboutScene;
-
+        public SpriteFont spriteFont;
+        private bool ispressedESC=false;
+        private KeyboardState previousState = Keyboard.GetState();
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
@@ -114,7 +116,8 @@ namespace HKFinalProject
             if (startScene.Enabled)
             {
                 selectedIndex = startScene.Menu.SelectedIndex;
-                if (selectedIndex == 0 && ks.IsKeyDown(Keys.Enter))
+
+                if (selectedIndex == 0 && ks.IsKeyDown(Keys.Enter) && !previousState.IsKeyDown(Keys.Enter))
                 {
                     hideAllScenes();
                     actionScene.ReStartGame();
@@ -149,12 +152,22 @@ namespace HKFinalProject
                     hideAllScenes();
                     startScene.show();
                 }
+                if (ispressedESC)
+                {
+                    ispressedESC = false;
+                     hideAllScenes();
+                    startScene.show();
+                }
             }
+            previousState = ks;
             // TODO: Add your update logic here
 
             base.Update(gameTime);
         }
-
+        public void setPressedESC(bool ispressedESC)
+        {
+            this.ispressedESC = ispressedESC;
+        }
         /// <summary>
         /// This is called when the game should draw itself.
         /// </summary>

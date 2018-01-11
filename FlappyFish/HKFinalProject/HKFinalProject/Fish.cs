@@ -22,6 +22,7 @@ namespace HKFinalProject
         int jumpPower=-15;
         readonly int fishkHeight = 90;
         readonly int fishWidth = 85;
+        bool fishDead = false;
         public Fish(Game game, SpriteBatch spriteBatch, ContentManager content) : base(game)
         {
             this.spriteBatch = spriteBatch;
@@ -40,6 +41,10 @@ namespace HKFinalProject
             base.Initialize();
             LoadContent();
         }
+        public void setFishDead(bool fishDead)
+        {
+            this.fishDead = fishDead;
+        }
         public override void Update(GameTime gameTime)
         {
          
@@ -48,7 +53,7 @@ namespace HKFinalProject
                 currentFrame = 1;
                 isJumping = true;
             }
-            if (isJumping)      // compute a nice arc so that up-movement is gradual
+            if (isJumping && !fishDead)      // compute a nice arc so that up-movement is gradual
             {
                 if (jumpPower < 0)
                 {
@@ -74,6 +79,10 @@ namespace HKFinalProject
                 fish.Y += 5;
                 currentFrame = 0;
             }
+            if (fishDead)
+            {
+                currentFrame = 3;
+            }
 
             base.Update(gameTime);
         }
@@ -92,8 +101,12 @@ namespace HKFinalProject
         {
             Texture2D fishText1 = content.Load<Texture2D>("Images/fish2");
             Texture2D fishText2 = content.Load<Texture2D>("Images/fish1");
+            Texture2D fishText3 = content.Load<Texture2D>("Images/fishScared");
+            Texture2D fishText4 = content.Load<Texture2D>("Images/fishDead");
             fishTex.Add(fishText1);
             fishTex.Add(fishText2);
+            fishTex.Add(fishText3);
+            fishTex.Add(fishText4);
 
             base.LoadContent();
         }

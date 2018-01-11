@@ -12,9 +12,9 @@ namespace HKFinalProject
 {
     public class ActionScene : GameScene
     {
-        private SpriteBatch spriteBatch;
+        private SpriteBatch spriteBatch; 
         private Fish fish;
-        private SpriteFont gameOverLabel;
+        private SpriteFont title, regular,writtingName;
         private List<Shark> sharks = new List<Shark>();
         private Background background;
         private Score score;
@@ -26,8 +26,13 @@ namespace HKFinalProject
         private bool isFishAlive = true;
         private bool hasFishDropped = false;
         private Rectangle scoreBoard;
+        private Rectangle eidtBar;
         private Texture2D SaveScoreTex;
-
+        private int editBarChange = 1;
+        private bool hasEditBarIntervalChange = false;
+        private string putName = "";
+        private Vector2 editBarPosition = new Vector2(303, 478);
+        private KeyboardState previousState;
         public ActionScene(Game game) : base(game)
         {
             g = (Game1)game;
@@ -41,9 +46,14 @@ namespace HKFinalProject
             fish = new Fish(g, spriteBatch, Content);
             background = new Background(g, spriteBatch, Content, "Images/background");
             score = new Score(g, spriteBatch, Content);
-            gameOverLabel = Content.Load<SpriteFont>("Fonts/hilightFont");
+            title = Content.Load<SpriteFont>("Fonts/title");
+            regular = Content.Load<SpriteFont>("Fonts/regularFont");
+            writtingName = Content.Load<SpriteFont>("Fonts/writtingFont");
+            
             scoreBoard = new Rectangle(100, 150, GraphicsDevice.Viewport.Width - 200, GraphicsDevice.Viewport.Height - 300);
+            eidtBar = new Rectangle(100, 150, 2, 30); ;
             SaveScoreTex = Content.Load<Texture2D>("Images/SaveScore");
+            previousState = Keyboard.GetState();
             ReStartGame();
             base.Initialize();
         }
@@ -56,11 +66,15 @@ namespace HKFinalProject
             {
                 isFishAlive = false;
                 hasFishDropped = true;
+                fish.setFishDead(true);
             }
             foreach (Shark shark in sharks)
             {
                 if ((fish.fish.X >= shark.sharkPositionX - fish.fish.Width && fish.fish.X <= shark.sharkPositionX + shark.sharkWidth) && (fish.fish.Y >= shark.sharkPositionY - fish.fish.Height && fish.fish.Y <= shark.sharkPositionY + shark.sharkHeight))
+                {
                     isFishAlive = false;
+                    fish.setFishDead(true);
+            }
             }
 
             if (isFishAlive)
@@ -82,6 +96,15 @@ namespace HKFinalProject
                 }
                 LoadShark();
             }
+            else
+            {
+                if (!hasEditBarIntervalChange)
+                {
+                    intervalTimer = 0.5f;
+                    hasEditBarIntervalChange = true;
+                }
+                IntervalForEditBar();
+            }
             base.Update(gameTime);
         }
     
@@ -95,7 +118,18 @@ namespace HKFinalProject
             isFishAlive = true;
             fish.fish.X = 50;
             fish.fish.Y = 50;
+            fish.setFishDead(false);
+            score.score = 0;
             hasFishDropped = false;
+        }
+        public void IntervalForEditBar()
+        {
+
+            if (interval >= intervalTimer)
+            {
+                interval = 0;
+                editBarChange *= -1;
+            }
         }
         public void LoadShark()
         {
@@ -132,10 +166,26 @@ namespace HKFinalProject
             if (hasFishDropped)
             {
                 spriteBatch.Begin();
-               scoreBoard = new Rectangle(100, 150, GraphicsDevice.Viewport.Width - 200, GraphicsDevice.Viewport.Height - 300);
+                scoreBoard = new Rectangle(100, 150, GraphicsDevice.Viewport.Width - 200, GraphicsDevice.Viewport.Height - 300);
                 spriteBatch.Draw(SaveScoreTex,scoreBoard, Color.White);
-               
-                //spriteBatch.DrawString(gameOverLabel, "Game Over", new Vector2(GraphicsDevice.Viewport.Width / 2, GraphicsDevice.Viewport.Height / 2), Color.Red);
+                spriteBatch.DrawString(title, "Game Over", new Vector2((GraphicsDevice.Viewport.Width - title.MeasureString("Game Over").X)/2, 150), Color.Red);
+                spriteBatch.DrawString(regular, "Please enter your name less than 5 long and hit enter.", new Vector2(200, 380), Color.Black);
+               if (editBarChange == 1)
+                { 
+                Texture2D editBar = Content.Load<Texture2D>("Images/editBar");
+                spriteBatch.Draw(editBar, editBarPosition, Color.White);
+                }
+                putName = score.enterName();
+                if (putName.Contains("#"))
+                {
+                    score.setPutName("");
+                    g.setPressedESC(true);
+                }
+                else
+                {
+                    spriteBatch.DrawString(writtingName, putName, new Vector2(303, 478), Color.Black);
+                    editBarPosition.X = 303 + writtingName.MeasureString(putName).X;
+                }
                 spriteBatch.End();
             }
             base.Draw(gameTime);

@@ -298,3 +298,8 @@ G:\Git\SharkCollision\FlappyFish\HKFinalProject\HKFinalProject\obj\x86\Debug\HKF
 G:\Git\SharkCollision\FlappyFish\HKFinalProject\HKFinalProject\obj\x86\Debug\HKFinalProject.exe
 G:\Git\SharkCollision\FlappyFish\HKFinalProject\HKFinalProject\obj\x86\Debug\HKFinalProject.pdb
 C:\Users\RIM\Documents\MonoGame-Flappy-Fish-\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\Content\Images\SaveScore.xnb
+C:\Users\RIM\Documents\MonoGame-Flappy-Fish-\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\Content\Images\EditBar.xnb
+C:\Users\RIM\Documents\MonoGame-Flappy-Fish-\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\Content\Fonts\Title.xnb
+C:\Users\RIM\Documents\MonoGame-Flappy-Fish-\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\Content\Images\fishDead.xnb
+C:\Users\RIM\Documents\MonoGame-Flappy-Fish-\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\Content\Images\fishScared.xnb
+C:\Users\RIM\Documents\MonoGame-Flappy-Fish-\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\Content\Fonts\writtingFont.xnb
