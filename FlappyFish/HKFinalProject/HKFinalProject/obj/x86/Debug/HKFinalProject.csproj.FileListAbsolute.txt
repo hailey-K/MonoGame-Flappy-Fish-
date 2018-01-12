@@ -372,3 +372,11 @@ G:\Git\MonoGame-Flappy-Fish--master\FlappyFish\HKFinalProject\HKFinalProject\obj
 G:\Git\MonoGame-Flappy-Fish--master\FlappyFish\HKFinalProject\HKFinalProject\obj\x86\Debug\HKFinalProject.csproj.CoreCompileInputs.cache
 G:\Git\MonoGame-Flappy-Fish--master\FlappyFish\HKFinalProject\HKFinalProject\obj\x86\Debug\HKFinalProject.exe
 G:\Git\MonoGame-Flappy-Fish--master\FlappyFish\HKFinalProject\HKFinalProject\obj\x86\Debug\HKFinalProject.pdb
+C:\Users\RIM\Documents\MonoGame-Flappy-Fish-\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\Content\Music\bump.xnb
+C:\Users\RIM\Documents\MonoGame-Flappy-Fish-\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\Content\Music\GameMusic.wma
+C:\Users\RIM\Documents\MonoGame-Flappy-Fish-\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\Content\Music\GameMusic.xnb
+C:\Users\RIM\Documents\MonoGame-Flappy-Fish-\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\Content\Music\gameOverScoreBoard.xnb
+C:\Users\RIM\Documents\MonoGame-Flappy-Fish-\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\Content\Music\jump.xnb
+C:\Users\RIM\Documents\MonoGame-Flappy-Fish-\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\Content\Music\mainMenu.wma
+C:\Users\RIM\Documents\MonoGame-Flappy-Fish-\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\Content\Music\mainMenu.xnb
+C:\Users\RIM\Documents\MonoGame-Flappy-Fish-\FlappyFish\HKFinalProject\HKFinalProject\bin\Windows\x86\Debug\Content\Music\typingSound.xnb

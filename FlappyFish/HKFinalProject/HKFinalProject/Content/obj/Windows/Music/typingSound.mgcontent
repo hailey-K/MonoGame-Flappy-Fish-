@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>G:/Git/MonoGame-Flappy-Fish--master/FlappyFish/HKFinalProject/HKFinalProject/Content/Music/typingSound.wav</SourceFile>
-  <SourceTime>2018-01-11T16:55:40.9252349-05:00</SourceTime>
-  <DestFile>G:/Git/MonoGame-Flappy-Fish--master/FlappyFish/HKFinalProject/HKFinalProject/Content/bin/Windows/Music/typingSound.xnb</DestFile>
-  <DestTime>2018-01-11T19:19:15.3345274-05:00</DestTime>
+  <SourceFile>C:/Users/RIM/Documents/MonoGame-Flappy-Fish-/FlappyFish/HKFinalProject/HKFinalProject/Content/Music/typingSound.wav</SourceFile>
+  <SourceTime>2018-01-11T16:55:40-05:00</SourceTime>
+  <DestFile>C:/Users/RIM/Documents/MonoGame-Flappy-Fish-/FlappyFish/HKFinalProject/HKFinalProject/Content/bin/Windows/Music/typingSound.xnb</DestFile>
+  <DestTime>2018-01-11T21:54:19.1881555-05:00</DestTime>
   <Importer>WavImporter</Importer>
   <ImporterTime>2017-03-01T10:05:36-05:00</ImporterTime>
   <Processor>SoundEffectProcessor</Processor>

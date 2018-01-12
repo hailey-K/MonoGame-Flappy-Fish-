@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>G:/Git/MonoGame-Flappy-Fish--master/FlappyFish/HKFinalProject/HKFinalProject/Content/Images/background_menu1.png</SourceFile>
-  <SourceTime>2018-01-11T14:39:07.5211118-05:00</SourceTime>
-  <DestFile>G:/Git/MonoGame-Flappy-Fish--master/FlappyFish/HKFinalProject/HKFinalProject/Content/bin/Windows/Images/background_menu1.xnb</DestFile>
-  <DestTime>2018-01-11T19:19:10.3973756-05:00</DestTime>
+  <SourceFile>C:/Users/RIM/Documents/MonoGame-Flappy-Fish-/FlappyFish/HKFinalProject/HKFinalProject/Content/Images/background_menu1.png</SourceFile>
+  <SourceTime>2018-01-11T14:39:06-05:00</SourceTime>
+  <DestFile>C:/Users/RIM/Documents/MonoGame-Flappy-Fish-/FlappyFish/HKFinalProject/HKFinalProject/Content/bin/Windows/Images/background_menu1.xnb</DestFile>
+  <DestTime>2018-01-11T21:54:14.0027773-05:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2017-03-01T10:05:36-05:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

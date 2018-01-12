@@ -209,7 +209,7 @@ namespace HKFinalProject
                 scoreBoard = new Rectangle(100, 150, GraphicsDevice.Viewport.Width - 200, GraphicsDevice.Viewport.Height - 300);
                 spriteBatch.Draw(SaveScoreTex, scoreBoard, Color.White);
                 spriteBatch.DrawString(title, "Game Over", new Vector2((GraphicsDevice.Viewport.Width - title.MeasureString("Game Over").X) / 2, 150), Color.Red);
-                spriteBatch.DrawString(regular, "Please enter your name less than 5 long and hit enter.", new Vector2(200, 380), Color.Black);
+                spriteBatch.DrawString(regular, "Please enter your name less than 10 long and hit enter.", new Vector2(200, 380), Color.Black);
 
                 if (!hasPlayedGameOver)
                 {
