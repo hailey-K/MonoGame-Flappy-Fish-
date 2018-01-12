@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SourceFileCollection xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Profile>Reach</Profile>
+  <Platform>Windows</Platform>
+  <Config />
+  <SourceFiles>
+    <File>C:/Users/RIM/Documents/MonoGame-Flappy-Fish-/Game Code/HKFinalProject/HKFinalProject/Content/Fonts/hilightFont.spritefont</File>
+    <File>C:/Users/RIM/Documents/MonoGame-Flappy-Fish-/Game Code/HKFinalProject/HKFinalProject/Content/Fonts/regularFont.spritefont</File>
+    <File>C:/Users/RIM/Documents/MonoGame-Flappy-Fish-/Game Code/HKFinalProject/HKFinalProject/Content/Images/Bat.png</File>
+    <File>C:/Users/RIM/Documents/MonoGame-Flappy-Fish-/Game Code/HKFinalProject/HKFinalProject/Content/Images/helpImage.png</File>
+    <File>C:/Users/RIM/Documents/MonoGame-Flappy-Fish-/Game Code/HKFinalProject/HKFinalProject/Content/Images/Fish.png</File>
+    <File>C:/Users/RIM/Documents/MonoGame-Flappy-Fish-/Game Code/HKFinalProject/HKFinalProject/Content/Images/background.png</File>
+    <File>C:/Users/RIM/Documents/MonoGame-Flappy-Fish-/Game Code/HKFinalProject/HKFinalProject/Content/Images/fish1.png</File>
+    <File>C:/Users/RIM/Documents/MonoGame-Flappy-Fish-/Game Code/HKFinalProject/HKFinalProject/Content/Images/fish2.png</File>
+    <File>C:/Users/RIM/Documents/MonoGame-Flappy-Fish-/Game Code/HKFinalProject/HKFinalProject/Content/Images/backgroundTest.png</File>
+    <File>C:/Users/RIM/Documents/MonoGame-Flappy-Fish-/Game Code/HKFinalProject/HKFinalProject/Content/Images/shark1.png</File>
+    <File>C:/Users/RIM/Documents/MonoGame-Flappy-Fish-/Game Code/HKFinalProject/HKFinalProject/Content/Images/shark2.png</File>
+    <File>C:/Users/RIM/Documents/MonoGame-Flappy-Fish-/Game Code/HKFinalProject/HKFinalProject/Content/Images/background_menu1.png</File>
+    <File>C:/Users/RIM/Documents/MonoGame-Flappy-Fish-/Game Code/HKFinalProject/HKFinalProject/Content/Images/background_menu2.png</File>
+    <File>C:/Users/RIM/Documents/MonoGame-Flappy-Fish-/Game Code/HKFinalProject/HKFinalProject/Content/Images/help.png</File>
+    <File>C:/Users/RIM/Documents/MonoGame-Flappy-Fish-/Game Code/HKFinalProject/HKFinalProject/Content/Images/about.png</File>
+    <File>C:/Users/RIM/Documents/MonoGame-Flappy-Fish-/Game Code/HKFinalProject/HKFinalProject/Content/Images/highScore.png</File>
+    <File>C:/Users/RIM/Documents/MonoGame-Flappy-Fish-/Game Code/HKFinalProject/HKFinalProject/Content/Images/backgroundLevel2.png</File>
+    <File>C:/Users/RIM/Documents/MonoGame-Flappy-Fish-/Game Code/HKFinalProject/HKFinalProject/Content/Images/SaveScore.png</File>
+    <File>C:/Users/RIM/Documents/MonoGame-Flappy-Fish-/Game Code/HKFinalProject/HKFinalProject/Content/Images/EditBar.png</File>
+    <File>C:/Users/RIM/Documents/MonoGame-Flappy-Fish-/Game Code/HKFinalProject/HKFinalProject/Content/Fonts/Title.spritefont</File>
+    <File>C:/Users/RIM/Documents/MonoGame-Flappy-Fish-/Game Code/HKFinalProject/HKFinalProject/Content/Images/fishDead.png</File>
+    <File>C:/Users/RIM/Documents/MonoGame-Flappy-Fish-/Game Code/HKFinalProject/HKFinalProject/Content/Images/fishScared.png</File>
+    <File>C:/Users/RIM/Documents/MonoGame-Flappy-Fish-/Game Code/HKFinalProject/HKFinalProject/Content/Fonts/writtingFont.spritefont</File>
+    <File>C:/Users/RIM/Documents/MonoGame-Flappy-Fish-/Game Code/HKFinalProject/HKFinalProject/Content/Music/GameMusic.mp3</File>
+    <File>C:/Users/RIM/Documents/MonoGame-Flappy-Fish-/Game Code/HKFinalProject/HKFinalProject/Content/Music/mainMenu.mp3</File>
+    <File>C:/Users/RIM/Documents/MonoGame-Flappy-Fish-/Game Code/HKFinalProject/HKFinalProject/Content/Music/jump.wav</File>
+    <File>C:/Users/RIM/Documents/MonoGame-Flappy-Fish-/Game Code/HKFinalProject/HKFinalProject/Content/Music/bump.wav</File>
+    <File>C:/Users/RIM/Documents/MonoGame-Flappy-Fish-/Game Code/HKFinalProject/HKFinalProject/Content/Music/gameOverScoreBoard.wav</File>
+    <File>C:/Users/RIM/Documents/MonoGame-Flappy-Fish-/Game Code/HKFinalProject/HKFinalProject/Content/Music/typingSound.wav</File>
+  </SourceFiles>
+</SourceFileCollection>
