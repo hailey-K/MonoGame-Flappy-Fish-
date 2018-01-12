@@ -9,6 +9,9 @@ using System.Collections.Generic;
 
 namespace HKFinalProject
 {
+    /// <summary>
+    /// HighScoreScene
+    /// </summary>
     class HighScoreScene : GameScene
     {
         private SpriteBatch spriteBatch;
@@ -16,7 +19,7 @@ namespace HKFinalProject
         private Rectangle highScoreBackground;
         SpriteFont highlightFont;
         File file;
-        string fileInfo="";
+        string fileInfo = "";
         Vector2 position;
         SpriteFont title;
         public HighScoreScene(Game game) : base(game)
@@ -25,21 +28,28 @@ namespace HKFinalProject
             ContentManager Content = game.Content;
             this.spriteBatch = g.spriteBatch;
             highScoreBackground = new Rectangle(0, 0, GraphicsDevice.Viewport.Width, GraphicsDevice.Viewport.Height);
-             highlightFont = game.Content.Load<SpriteFont>("Fonts/hilightFont");
+            highlightFont = game.Content.Load<SpriteFont>("Fonts/hilightFont");
             aboutTex = g.Content.Load<Texture2D>("Images/highScore");
             file = new File();
             file.CreateNewFile();
             title = Content.Load<SpriteFont>("Fonts/title");
-            position = new Vector2(350,245);
+            position = new Vector2(350, 245);
         }
-
+        /// <summary>
+        /// Update
+        /// </summary>
+        /// <param name="gameTime"></param>
         public override void Update(GameTime gameTime)
         {
             fileInfo = file.readFile();
             fileInfo = SortedByHighScore(fileInfo);
             base.Update(gameTime);
         }
-
+        /// <summary>
+        /// SortedByHighScore : Sort ScoreList by highest score
+        /// </summary>
+        /// <param name="fileInfo"></param>
+        /// <returns></returns>
         public string SortedByHighScore(string fileInfo)
         {
             string[] lines = Regex.Split(fileInfo, "\n");
@@ -50,23 +60,23 @@ namespace HKFinalProject
             foreach (string temp in lines)
             {
                 if (!string.IsNullOrWhiteSpace(temp))
-                { 
-                string[] splitLine = Regex.Split(temp, ",");
-                splitLine[0] = splitLine[0].Replace("\"","");
-                lineList.Add(splitLine);
+                {
+                    string[] splitLine = Regex.Split(temp, ",");
+                    splitLine[0] = splitLine[0].Replace("\"", "");
+                    lineList.Add(splitLine);
                 }
             }
 
-            while(lineList.Count != 0)
+            while (lineList.Count != 0)
             {
                 string[] temp = lineList[0];
                 int max = int.Parse(temp[1]);
                 int maxIndex = 0;
 
-                for(int i=0;i< lineList.Count;i++)
+                for (int i = 0; i < lineList.Count; i++)
                 {
                     string[] tempFindMinS = lineList[i];
-                    if(int.Parse(tempFindMinS[1]) >= max)
+                    if (int.Parse(tempFindMinS[1]) >= max)
                     {
                         max = int.Parse(tempFindMinS[1]);
                         maxIndex = i;
@@ -78,21 +88,25 @@ namespace HKFinalProject
             fileInfo = "";
             foreach (string[] highscoreS in sortedByHighScore)
             {
-                if(highScoreIndex <= 10)
+                if (highScoreIndex <= 10)
                 {
-                fileInfo += highScoreIndex + " ) " + highscoreS[0] + " , " + highscoreS[1]+"\n";
+                    fileInfo += highScoreIndex + " ) " + highscoreS[0] + " , " + highscoreS[1] + "\n";
                 }
                 highScoreIndex++;
             }
 
             return fileInfo;
         }
+        /// <summary>
+        /// Draw
+        /// </summary>
+        /// <param name="gameTime"></param>
         public override void Draw(GameTime gameTime)
         {
             spriteBatch.Begin();
             spriteBatch.Draw(aboutTex, highScoreBackground, Color.White);
             spriteBatch.DrawString(highlightFont, fileInfo, position, Color.Black);
-            spriteBatch.DrawString(title, "Top 10 Records", new Vector2(280,73), Color.Red);
+            spriteBatch.DrawString(title, "Top 10 Records", new Vector2(280, 73), Color.Red);
             spriteBatch.End();
 
             base.Draw(gameTime);

@@ -26,6 +26,9 @@ namespace HKFinalProject
         public SpriteFont spriteFont;
         private bool ispressedESC=false;
         private KeyboardState previousState = Keyboard.GetState();
+        private Song song;
+       
+          
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
@@ -45,12 +48,27 @@ namespace HKFinalProject
             // TODO: Add your initialization logic here
             Shared.stage = new Vector2(graphics.PreferredBackBufferWidth,
                 graphics.PreferredBackBufferHeight);
+            this.song = Content.Load<Song>("Music/mainMenu");
+            MediaPlayer.Play(song);
 
+
+            MediaPlayer.MediaStateChanged += MediaPlayer_MediaStateChanged;
             //initialize other Shared class members
 
             base.Initialize();
         }
-
+        /// <summary>
+        /// MediaPlayer_MediaStateChanged : Gradually music play
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        void MediaPlayer_MediaStateChanged(object sender, System.
+                                    EventArgs e)
+        {
+            // 0.0f is silent, 1.0f is full volume
+            MediaPlayer.Volume -= 0.1f;
+            MediaPlayer.Play(song);
+        }
         private void hideAllScenes()
         {
             GameScene gs = null;
@@ -122,6 +140,7 @@ namespace HKFinalProject
                     hideAllScenes();
                     actionScene.ReStartGame();
                     actionScene.show();
+                    ChangeSong("Music/GameMusic");
                 }
                 else if (selectedIndex == 1 && ks.IsKeyDown(Keys.Enter))
                 {
@@ -149,13 +168,21 @@ namespace HKFinalProject
             {
                 if (ks.IsKeyDown(Keys.Escape))
                 {
+                    if (actionScene.Enabled)
+                    {
+                        ChangeSong("Music/mainMenu");
+                    }
                     hideAllScenes();
                     startScene.show();
                 }
                 if (ispressedESC)
                 {
                     ispressedESC = false;
-                     hideAllScenes();
+                    if (actionScene.Enabled)
+                    {
+                        ChangeSong("Music/mainMenu");
+                    }
+                    hideAllScenes();
                     startScene.show();
                 }
             }
@@ -164,6 +191,20 @@ namespace HKFinalProject
 
             base.Update(gameTime);
         }
+        /// <summary>
+        /// ChangeSong : Change song, setting different song path
+        /// </summary>
+        /// <param name="path"></param>
+        public void ChangeSong(string path)
+        {
+            this.song = Content.Load<Song>(path);
+            MediaPlayer.Play(song);
+            MediaPlayer.MediaStateChanged += MediaPlayer_MediaStateChanged;
+        }
+        /// <summary>
+        /// setPressedESC : Make ESC Key pressed
+        /// </summary>
+        /// <param name="ispressedESC"></param>
         public void setPressedESC(bool ispressedESC)
         {
             this.ispressedESC = ispressedESC;

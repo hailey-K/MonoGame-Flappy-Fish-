@@ -25,6 +25,10 @@ namespace HKFinalProject
                                 "Quit"};
         SpriteFont title;
         Game1 g;
+        /// <summary>
+        /// StartScene
+        /// </summary>
+        /// <param name="game"></param>
         public StartScene(Game game) : base(game)
         {
             g = (Game1)game;
@@ -38,14 +42,20 @@ namespace HKFinalProject
             Menu = new MenuComponent(game, spriteBatch, regularFont, highlightFont, menuItems);
             this.Components.Add(Menu);
         }
-
+        /// <summary>
+        /// Update
+        /// </summary>
+        /// <param name="gameTime"></param>
         public override void Update(GameTime gameTime)
         {
             g.setPressedESC(false);
             menuBackground.Update(gameTime);
             base.Update(gameTime);
         }
-
+        /// <summary>
+        /// Draw
+        /// </summary>
+        /// <param name="gameTime"></param>
         public override void Draw(GameTime gameTime)
         {
             menuBackground.Draw(gameTime);

@@ -10,11 +10,13 @@ using Microsoft.Xna.Framework.Input;
 
 namespace HKFinalProject
 {
+    /// <summary>
+    /// Background : Scrolling background class
+    /// </summary>
     class Background : DrawableGameComponent
     {
         private SpriteBatch spriteBatch;
         ContentManager content;
-        // public Rectangle backgroundRec;
         public Rectangle backgroundRec1, backgroundRec2;
         public Texture2D backgroundTex;
         string imageSource;
@@ -26,17 +28,27 @@ namespace HKFinalProject
             Initialize();
             LoadContent();
         }
+        /// <summary>
+        /// Initialize
+        /// </summary>
         public override void Initialize()
         {
             backgroundRec1 = new Rectangle(0, 0, GraphicsDevice.Viewport.Width, GraphicsDevice.Viewport.Height);
             backgroundRec2 = new Rectangle(backgroundRec1.Width, 0, GraphicsDevice.Viewport.Width, GraphicsDevice.Viewport.Height);
             base.Initialize();
         }
+        /// <summary>
+        /// LoadContent
+        /// </summary>
         protected override void LoadContent()
         {
             backgroundTex = content.Load<Texture2D>(imageSource);
             base.LoadContent();
         }
+        /// <summary>
+        /// Update : Changing the images' X and Y, It makes infinite background
+        /// </summary>
+        /// <param name="gameTime"></param>
         public override void Update(GameTime gameTime)
         {
             if (backgroundRec1.X + backgroundRec1.Width <= 0)
@@ -53,7 +65,10 @@ namespace HKFinalProject
 
             base.Update(gameTime);
         }
-
+        /// <summary>
+        /// Draw
+        /// </summary>
+        /// <param name="gameTime"></param>
         public override void Draw(GameTime gameTime)
         {
             spriteBatch.Begin();

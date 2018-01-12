@@ -4,13 +4,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using Microsoft.Xna.Framework.Media;
 
 namespace HKFinalProject
 {
-    class Fish: DrawableGameComponent
+    /// <summary>
+    /// Fish
+    /// </summary>
+    class Fish : DrawableGameComponent
     {
         private SpriteBatch spriteBatch;
         ContentManager content;
@@ -19,16 +24,20 @@ namespace HKFinalProject
         List<Texture2D> fishTex;
         int currentFrame = 0;
         bool isJumping = false;
-        int jumpPower=-15;
+        int jumpPower = -15;
         readonly int fishkHeight = 90;
         readonly int fishWidth = 85;
         bool fishDead = false;
+        private SoundEffectInstance jumpSoundEffectInstance;
         public Fish(Game game, SpriteBatch spriteBatch, ContentManager content) : base(game)
         {
             this.spriteBatch = spriteBatch;
             this.content = content;
             Initialize();
         }
+        /// <summary>
+        /// Initialize
+        /// </summary>
         public override void Initialize()
         {
             fishRec = new List<Rectangle>();
@@ -38,16 +47,28 @@ namespace HKFinalProject
             Rectangle fish2 = new Rectangle(50, 50, fishWidth, fishkHeight);
             fishRec.Add(fish1);
             fishRec.Add(fish2);
+            jumpSoundEffectInstance = content.Load<SoundEffect>(@"Music\jump").CreateInstance();
+
+
+
             base.Initialize();
             LoadContent();
         }
+        /// <summary>
+        /// setFishDead : set value depending on fish alive
+        /// </summary>
+        /// <param name="fishDead"></param>
         public void setFishDead(bool fishDead)
         {
             this.fishDead = fishDead;
         }
+        /// <summary>
+        /// Update
+        /// </summary>
+        /// <param name="gameTime"></param>
         public override void Update(GameTime gameTime)
         {
-         
+
             if (Keyboard.GetState().IsKeyDown(Keys.Space))
             {
                 currentFrame = 1;
@@ -55,6 +76,8 @@ namespace HKFinalProject
             }
             if (isJumping && !fishDead)      // compute a nice arc so that up-movement is gradual
             {
+
+                jumpSoundEffectInstance.Play();
                 if (jumpPower < 0)
                 {
                     if (fish.Y <= 0)
@@ -69,7 +92,7 @@ namespace HKFinalProject
                     }
                 }
                 else
-                { 
+                {
                     isJumping = false;
                     jumpPower = -15;
                 }
@@ -78,6 +101,7 @@ namespace HKFinalProject
             {
                 fish.Y += 5;
                 currentFrame = 0;
+                jumpSoundEffectInstance.Stop();
             }
             if (fishDead)
             {
@@ -86,7 +110,10 @@ namespace HKFinalProject
 
             base.Update(gameTime);
         }
-
+        /// <summary>
+        /// Draw
+        /// </summary>
+        /// <param name="gameTime"></param>
         public override void Draw(GameTime gameTime)
         {
             spriteBatch.Begin();
@@ -97,6 +124,9 @@ namespace HKFinalProject
             spriteBatch.End();
             base.Draw(gameTime);
         }
+        /// <summary>
+        /// LoadContent
+        /// </summary>
         protected override void LoadContent()
         {
             Texture2D fishText1 = content.Load<Texture2D>("Images/fish2");
@@ -110,7 +140,5 @@ namespace HKFinalProject
 
             base.LoadContent();
         }
-
-     
     }
 }

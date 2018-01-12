@@ -4,17 +4,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using Microsoft.Xna.Framework.Media;
 
 namespace HKFinalProject
 {
+    /// <summary>
+    /// ActionScene : All of the actually game is happening here
+    /// </summary>
     public class ActionScene : GameScene
     {
-        private SpriteBatch spriteBatch; 
+        private SpriteBatch spriteBatch;
         private Fish fish;
-        private SpriteFont title, regular,writtingName;
+        private SpriteFont title, regular, writtingName;
         private List<Shark> sharks = new List<Shark>();
         private Background background;
         private Score score;
@@ -33,6 +38,11 @@ namespace HKFinalProject
         private string putName = "";
         private Vector2 editBarPosition = new Vector2(303, 478);
         private KeyboardState previousState;
+        private SoundEffectInstance bumpSoundEffectInstance;
+        private SoundEffectInstance gameOverSoundEffectInstance;
+        private bool hasPlayedBump = false;
+        private bool hasPlayedGameOver = false;
+
         public ActionScene(Game game) : base(game)
         {
             g = (Game1)game;
@@ -40,6 +50,9 @@ namespace HKFinalProject
             Initialize();
             this.Components.Add(fish);
         }
+        /// <summary>
+        /// Initialize
+        /// </summary>
         public override void Initialize()
         {
             Content = g.Content;
@@ -49,15 +62,21 @@ namespace HKFinalProject
             title = Content.Load<SpriteFont>("Fonts/title");
             regular = Content.Load<SpriteFont>("Fonts/regularFont");
             writtingName = Content.Load<SpriteFont>("Fonts/writtingFont");
-            
             scoreBoard = new Rectangle(100, 150, GraphicsDevice.Viewport.Width - 200, GraphicsDevice.Viewport.Height - 300);
             eidtBar = new Rectangle(100, 150, 2, 30); ;
             SaveScoreTex = Content.Load<Texture2D>("Images/SaveScore");
+            bumpSoundEffectInstance = Content.Load<SoundEffect>(@"Music\bump").CreateInstance();
+            gameOverSoundEffectInstance = Content.Load<SoundEffect>(@"Music\gameOverScoreBoard").CreateInstance();
             previousState = Keyboard.GetState();
             ReStartGame();
             base.Initialize();
         }
         float interval = 0;
+
+        /// <summary>
+        /// Update
+        /// </summary>
+        /// <param name="gameTime"></param>
         public override void Update(GameTime gameTime)
         {
             interval += (float)gameTime.ElapsedGameTime.TotalSeconds;
@@ -70,11 +89,16 @@ namespace HKFinalProject
             }
             foreach (Shark shark in sharks)
             {
-                if ((fish.fish.X >= shark.sharkPositionX - fish.fish.Width && fish.fish.X <= shark.sharkPositionX + shark.sharkWidth) && (fish.fish.Y >= shark.sharkPositionY - fish.fish.Height && fish.fish.Y <= shark.sharkPositionY + shark.sharkHeight))
+                if (fish.fish.Intersects(shark.getBound()))
                 {
                     isFishAlive = false;
                     fish.setFishDead(true);
-            }
+                    if (!hasPlayedBump)
+                    {
+                        bumpSoundEffectInstance.Play();
+                        hasPlayedBump = true;
+                    }
+                }
             }
 
             if (isFishAlive)
@@ -107,7 +131,9 @@ namespace HKFinalProject
             }
             base.Update(gameTime);
         }
-    
+        /// <summary>
+        /// ReStartGame : initialize all values after game over
+        /// </summary>
         public void ReStartGame()
         {
             for (int i = 0; i < sharks.Count; i++)
@@ -121,7 +147,14 @@ namespace HKFinalProject
             fish.setFishDead(false);
             score.score = 0;
             hasFishDropped = false;
+            hasPlayedBump = false;
+            hasPlayedGameOver = false;
+            hasChangeBackground = false;
+            background = new Background(g, spriteBatch, Content, "Images/background");
         }
+        /// <summary>
+        /// IntervalForEditBar : Set interval for edit bar
+        /// </summary>
         public void IntervalForEditBar()
         {
 
@@ -131,6 +164,9 @@ namespace HKFinalProject
                 editBarChange *= -1;
             }
         }
+        /// <summary>
+        /// LoadShark : Load Shark in different timing
+        /// </summary>
         public void LoadShark()
         {
 
@@ -145,7 +181,7 @@ namespace HKFinalProject
                     sharks.Add(new Shark(g, spriteBatch, Content, sharkY));
             }
 
-            for(int i = 0; i < sharks.Count; i++)
+            for (int i = 0; i < sharks.Count; i++)
             {
                 if (sharks[i].sharkPositionX + 110 <= 0)
                 {
@@ -154,6 +190,10 @@ namespace HKFinalProject
                 }
             }
         }
+        /// <summary>
+        /// Draw
+        /// </summary>
+        /// <param name="gameTime"></param>
         public override void Draw(GameTime gameTime)
         {
             background.Draw(gameTime);
@@ -167,13 +207,19 @@ namespace HKFinalProject
             {
                 spriteBatch.Begin();
                 scoreBoard = new Rectangle(100, 150, GraphicsDevice.Viewport.Width - 200, GraphicsDevice.Viewport.Height - 300);
-                spriteBatch.Draw(SaveScoreTex,scoreBoard, Color.White);
-                spriteBatch.DrawString(title, "Game Over", new Vector2((GraphicsDevice.Viewport.Width - title.MeasureString("Game Over").X)/2, 150), Color.Red);
+                spriteBatch.Draw(SaveScoreTex, scoreBoard, Color.White);
+                spriteBatch.DrawString(title, "Game Over", new Vector2((GraphicsDevice.Viewport.Width - title.MeasureString("Game Over").X) / 2, 150), Color.Red);
                 spriteBatch.DrawString(regular, "Please enter your name less than 5 long and hit enter.", new Vector2(200, 380), Color.Black);
-               if (editBarChange == 1)
-                { 
-                Texture2D editBar = Content.Load<Texture2D>("Images/editBar");
-                spriteBatch.Draw(editBar, editBarPosition, Color.White);
+
+                if (!hasPlayedGameOver)
+                {
+                    gameOverSoundEffectInstance.Play();
+                    hasPlayedGameOver = true;
+                }
+                if (editBarChange == 1)
+                {
+                    Texture2D editBar = Content.Load<Texture2D>("Images/editBar");
+                    spriteBatch.Draw(editBar, editBarPosition, Color.White);
                 }
                 putName = score.enterName();
                 if (putName.Contains("#"))

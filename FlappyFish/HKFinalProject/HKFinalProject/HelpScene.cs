@@ -9,6 +9,9 @@ using Microsoft.Xna.Framework.Input;
 
 namespace HKFinalProject
 {
+    /// <summary>
+    /// HelpScene
+    /// </summary>
     public class HelpScene : GameScene
     {
         private SpriteBatch spriteBatch;
@@ -22,12 +25,18 @@ namespace HKFinalProject
             helpTex = g.Content.Load<Texture2D>("Images/help");
 
         }
-
+        /// <summary>
+        /// Update
+        /// </summary>
+        /// <param name="gameTime"></param>
         public override void Update(GameTime gameTime)
         {
             base.Update(gameTime);
         }
-
+        /// <summary>
+        /// Draw
+        /// </summary>
+        /// <param name="gameTime"></param>
         public override void Draw(GameTime gameTime)
         {
             spriteBatch.Begin();

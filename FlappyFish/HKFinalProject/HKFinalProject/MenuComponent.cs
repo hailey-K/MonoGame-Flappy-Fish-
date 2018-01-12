@@ -9,6 +9,9 @@ using Microsoft.Xna.Framework.Input;
 
 namespace HKFinalProject
 {
+    /// <summary>
+    /// MenuComponent
+    /// </summary>
     public class MenuComponent : DrawableGameComponent
     {
         private SpriteBatch spriteBatch;
@@ -18,8 +21,7 @@ namespace HKFinalProject
         private Vector2 position;
         private Color regularColor = Color.Black;
         private Color hilightColor = Color.Red;
-
-        private KeyboardState oldState; // why??
+        private KeyboardState oldState;
 
         public MenuComponent(Game game,
             SpriteBatch spriteBatch,
@@ -30,12 +32,14 @@ namespace HKFinalProject
             this.spriteBatch = spriteBatch;
             this.regularFont = regularFont;
             this.hilightFont = hilightFont;
-            //menuItems = new List<string>(menus); // check if it works;
-            menuItems = menus.ToList();  // check this later
+            menuItems = menus.ToList();
             position = new Vector2(Shared.stage.X / 2, Shared.stage.Y / 2);
 
         }
-
+        /// <summary>
+        /// Update
+        /// </summary>
+        /// <param name="gameTime"></param>
         public override void Update(GameTime gameTime)
         {
             KeyboardState ks = Keyboard.GetState();
@@ -61,7 +65,10 @@ namespace HKFinalProject
 
             base.Update(gameTime);
         }
-
+        /// <summary>
+        /// Draw
+        /// </summary>
+        /// <param name="gameTime"></param>
         public override void Draw(GameTime gameTime)
         {
             Vector2 tempPos = position;

@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace HKFinalProject
 {
+    /// <summary>
+    /// File : File Save, File Load
+    /// </summary>
     public class File
     {
         string path;
@@ -19,21 +22,30 @@ namespace HKFinalProject
             path = Environment.CurrentDirectory + @"\ScoreList.txt";
         }
 
+        /// <summary>
+        /// readFile : File Load
+        /// </summary>
+        /// <returns></returns>
         public string readFile()
         {
-          file = new FileStream(path, FileMode.OpenOrCreate, FileAccess.Read);
+            file = new FileStream(path, FileMode.OpenOrCreate, FileAccess.Read);
 
             r = new StreamReader(file);
             string highScore = "";
             while (r.Peek() >= 0)
             {
-                highScore+=r.ReadLine()+"\n";
+                highScore += r.ReadLine() + "\n";
             }
             r.Close();
             return highScore;
         }
-     public void SaveFile(string name, int score)
-    {
+        /// <summary>
+        /// SaveFile 
+        /// </summary>
+        /// <param name="name"></param>
+        /// <param name="score"></param>
+        public void SaveFile(string name, int score)
+        {
             file = new FileStream(path, FileMode.OpenOrCreate, FileAccess.Write);
             w = new StreamWriter(file);
             long endPoint = file.Length;
@@ -41,8 +53,11 @@ namespace HKFinalProject
             w.WriteLine("\"" + name + "\"," + score);
             w.Close();
         }
-    public void CreateNewFile()
-    {
+        /// <summary>
+        /// CreateNewFile : Create new file if not exists already
+        /// </summary>
+        public void CreateNewFile()
+        {
             file = new FileStream(path, FileMode.OpenOrCreate, FileAccess.Write);
             w = new StreamWriter(file);
             if (!Directory.Exists(Path.GetDirectoryName(path)))

@@ -10,6 +10,9 @@ using Microsoft.Xna.Framework.Input;
 
 namespace HKFinalProject
 {
+    /// <summary>
+    /// MenuBackground
+    /// </summary>
     class MenuBackground : DrawableGameComponent
     {
         private SpriteBatch spriteBatch;
@@ -37,6 +40,10 @@ namespace HKFinalProject
             backgroundRec.Add(background2);
             LoadContent();
         }
+        /// <summary>
+        /// Update
+        /// </summary>
+        /// <param name="gameTime"></param>
         public override void Update(GameTime gameTime)
         {
 
@@ -57,7 +64,10 @@ namespace HKFinalProject
 
             base.Update(gameTime);
         }
-
+        /// <summary>
+        /// Draw
+        /// </summary>
+        /// <param name="gameTime"></param>
         public override void Draw(GameTime gameTime)
         {
             spriteBatch.Begin();
@@ -68,6 +78,9 @@ namespace HKFinalProject
             spriteBatch.End();
             base.Draw(gameTime);
         }
+        /// <summary>
+        /// LoadContent
+        /// </summary>
         protected override void LoadContent()
         {
             Texture2D backgroundText1 = content.Load<Texture2D>("Images/background_menu1");

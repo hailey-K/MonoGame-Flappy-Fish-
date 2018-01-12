@@ -9,6 +9,9 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 namespace HKFinalProject
 {
+    /// <summary>
+    /// Shark
+    /// </summary>
     class Shark : DrawableGameComponent
     {
         private SpriteBatch spriteBatch;
@@ -16,12 +19,11 @@ namespace HKFinalProject
         List<Texture2D> sharkTex;
         Rectangle shark;
         int currentFrame = 0;
-        const int FRAMEDELAYTIMER = 10;          //how many game loop iterations before we  
+        const int FRAMEDELAYTIMER = 10;
         int frameDelay = 0;
         public readonly int sharkHeight = 110;
         public readonly int sharkWidth = 120;
         int speed = 5;
-
         public int sharkPositionX;
         public int sharkPositionY;
         public Shark(Game game, SpriteBatch spriteBatch, ContentManager content, int sharkPositionY) : base(game)
@@ -30,23 +32,37 @@ namespace HKFinalProject
             this.content = content;
             sharkTex = new List<Texture2D>();
             this.sharkPositionY = sharkPositionY;
-           sharkPositionX = GraphicsDevice.Viewport.Width - sharkWidth;
+            sharkPositionX = GraphicsDevice.Viewport.Width - sharkWidth;
             shark = new Rectangle(sharkPositionX, sharkPositionY, sharkWidth, sharkHeight);
             LoadContent();
         }
+        /// <summary>
+        /// getBound : Get Rectangle (position, size)
+        /// </summary>
+        /// <returns></returns>
+        public Rectangle getBound()
+        {
+            return new Rectangle(sharkPositionX + 10, sharkPositionY + 10, sharkWidth-15, sharkHeight-20);
+        }
+        /// <summary>
+        /// Update
+        /// </summary>
+        /// <param name="gameTime"></param>
         public override void Update(GameTime gameTime)
         {
-            sharkPositionX-= speed;
+            sharkPositionX -= speed;
 
             frameDelay++;
             if (frameDelay > FRAMEDELAYTIMER)
             {
-                frameDelay = 0;                 //reset the frame counter
-                if (currentFrame == 0) { 
+                frameDelay = 0;
+                if (currentFrame == 0)
+                {
                     currentFrame = 1;
                     sharkPositionY += 3;
                 }
-                else { 
+                else
+                {
                     currentFrame = 0;
                     sharkPositionY -= 3;
                 }
@@ -55,10 +71,18 @@ namespace HKFinalProject
             shark = new Rectangle(sharkPositionX, sharkPositionY, sharkWidth, sharkHeight);
             base.Update(gameTime);
         }
+        /// <summary>
+        /// setSpeed : set Shark's speed
+        /// </summary>
+        /// <param name="speed"></param>
         public void setSpeed(int speed)
         {
             this.speed = speed;
         }
+        /// <summary>
+        /// Draw
+        /// </summary>
+        /// <param name="gameTime"></param>
         public override void Draw(GameTime gameTime)
         {
             spriteBatch.Begin();
@@ -69,6 +93,9 @@ namespace HKFinalProject
             spriteBatch.End();
             base.Draw(gameTime);
         }
+        /// <summary>
+        /// LoadContent
+        /// </summary>
         protected override void LoadContent()
         {
             Texture2D fishText1 = content.Load<Texture2D>("Images/shark1");

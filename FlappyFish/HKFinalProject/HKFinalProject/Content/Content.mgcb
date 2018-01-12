@@ -269,3 +269,39 @@
 /processorParam:TextureFormat=Compressed
 /build:Fonts/writtingFont.spritefont
 
+#begin Music/GameMusic.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:Music/GameMusic.mp3
+
+#begin Music/mainMenu.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:Music/mainMenu.mp3
+
+#begin Music/jump.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Music/jump.wav
+
+#begin Music/bump.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Music/bump.wav
+
+#begin Music/gameOverScoreBoard.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Music/gameOverScoreBoard.wav
+
+#begin Music/typingSound.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Music/typingSound.wav
+
